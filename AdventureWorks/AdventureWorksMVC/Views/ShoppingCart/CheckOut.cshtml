@@ -1,0 +1,51 @@
+﻿<script src="~/js/CheckOut.js"></script>
+@{
+    ViewBag.Title = "AdventureWorks Cycles - Shopping Cart";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+<div class="CheckOut">
+        @Html.Partial("_OrderProgress", new ViewDataDictionary { { "OrderStep", 2 }})
+        <div class="CheckOutBody">
+            <div class="BillInfo">
+                @{
+                    Html.RenderPartial("_BillInfo", new ViewDataDictionary { { "Type", "Bill" }});
+                    }
+            </div>
+            <div class="PaymentInfo">
+                <fieldset class="Payment">
+                    <legend class="PaymentTypeTitle">Payment Type</legend>
+                    <ul class="PaymentType">
+                        <li class="PaymentCard">
+                            <input type="radio" name="PaymentType" value="Visa" checked="checked">Visa<br>
+                            <input type="radio" name="PaymentType" value="MasterCard">MasterCard<br>
+                            <input type="radio" name="PaymentType" value="American Express">American Express<br>
+                        </li>
+                        <li class="PaymentCardNumber">Card Number</li>
+                        <li class="PaymentCardNumberValue">
+                            @Html.TextBox("CardNumber", "1234123412341234", new { ID = "CardNumber", @class = "", maxlength = "50" })
+                            <span style="color:red;">
+                                @Html.Label("ErrCardNumber", " ", new { id = "ErrCardNumber" })
+                            </span>
+                        </li>
+                        <li class="CardExpirationDate">Expiration</li>
+                        <li class="CardExpirationDateValue">
+                            @Html.TextBox("Expiration", "", new { ID = "Expiration", @class = "", style = "width:300px;" })
+                        </li>
+                        <li class="CardCode">Code</li>
+                        <li class="CardCodeValue">
+                            @Html.TextBox("Code", "123", new { ID = "Code", @class = "", style = "width:300px;" })
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+        <div class="CheckOutFooter">
+            <div class="right">
+                <input type="button" id="btnNext" value="Next (Shipping)" class="NextButton" onclick="btnNext_Click();" />
+            </div>
+            <div class="right">
+                <input type="button" id="btnBack" value="Back" class="BackButton" onclick="btnBack_Click();" />
+            </div>
+        </div>
+    </div>

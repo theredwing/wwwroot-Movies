@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdventureWorks Cycles</title>
+	<link rel="SHORTCUT ICON" href="Images/Wijmo72X72.png" />
+
+            <!--jQuery References (2 Files) -->
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js" type="text/javascript"></script>
+ 
+        <!--Theme (Required Them Files) -->
+    @{
+         if (Session["Theme"] == null)
+        { 
+            <link class="wijmo-stylesheet-wijmo_theme" href="http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css" rel="stylesheet" type="text/css" title="cobalt-jqueryui" />
+            Session["Theme"] = "http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css";
+        }
+         else
+         { 
+            <link class="wijmo-stylesheet-wijmo_theme" href="@Session["Theme"]" rel="stylesheet" type="text/css" title="cobalt-jqueryui" /> 
+         }
+    }
+ 
+        <!--Wijmo Widgets CSS (1 File) -->
+        <link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20163.110.min.css" rel="stylesheet" type="text/css" />
+ 
+        <!--Wijmo Widgets JavaScript (2 Files)-->
+        <script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20163.110.min.js" type="text/javascript"></script>
+        <script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20163.110.min.js" type="text/javascript"></script>
+
+        <!--Project CSS/JS-->        
+        <script src="@Url.Content("~/js/AdvCommon.js")"></script>
+        <link href="@Url.Content("~/App_Themes/windows7/StyleBase.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/App_Themes/windows7/StyleSheet.css")" rel="stylesheet" />
+
+
+        <link rel="stylesheet" type="text/css" href="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.themes.extensions.wijreportviewer.css")" />
+        <link rel="stylesheet" type="text/css" href="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.themes.extensions.c1reportviewer.css")" />
+        <script src="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.scripts.extensions.c1splitter.min.js")" type="text/javascript"></script>
+        <script src="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.scripts.extensions.c1menu.min.js")" type="text/javascript"></script>
+        <script src="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.scripts.widgets.wijreportviewer.min.js")" type="text/javascript"></script>
+        <script src="@Url.WebResource(typeof(C1.Web.Wijmo.Controls.C1TargetControlBase), "C1.Web.Wijmo.Controls.Resources.scripts.extensions.c1reportviewer.min.js")" type="text/javascript"></script>
+    @RenderSection("header", false)
+</head>
+<body class='@ViewBag.BodyClass' id="body1">
+    @{Html.RenderAction("HeaderLayout", "SiteLayout");}
+    <div id="doc2" class="yui-t3 wrapper">
+        <div id="bd">
+            <div id="yui-main">
+                <div class="content">
+                   <div>
+                      @RenderBody()
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        @{Html.RenderAction("FooterLayout", "SiteLayout");}
+    @*@{Html.RenderAction("HeaderLayout", "SiteLayout");}*@
+</body>
+</html>

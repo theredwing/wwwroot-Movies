@@ -1,0 +1,72 @@
+﻿<script src="~/js/OrderComplete.js"></script>
+@{
+    ViewBag.Title = "AdventureWorks Cycles - Shopping Cart";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+<div class="body">
+        <h1 class="OrderCompleteTitle">
+            Order Complete
+        </h1>
+        <p>
+            Your order was successfully charged. You will receive a confirmation email with shipping information. 
+            Below is a copy of your receipt.
+        </p>
+<div id="reportviewersample" style="width: 950px; height: 600px;">
+    <div class="c1-c1reportviewer-toolbar ui-widget-header ui-corner-all">
+        <button class="print" title="Print">
+            Print</button><span class="exportgroup">
+                <button class="export">
+                Export</button>
+                <button class="select_export_format">
+                    select export format</button></span>
+        <button class="firstpage" title="First page">
+                        First page</button>
+        <button class="previouspage" title="Previous page">
+                            Previous page</button><span><input type="text" class="pageindex" value="1" />
+                                /
+                                <label class="pagecount">
+                                    0</label></span>
+        <button class="nextpage" title="Next page">
+                                        Next page</button>
+        <button class="lastpage" title="Last page">
+                                            Last page</button>
+        <button class="zoomout" title="Zoom out">
+                                                Zoom out</button>
+        <button class="zoomin" title="Zoom in">
+                                                    Zoom in</button><select class="zoom"><option value="10%">10%</option>
+                                                        <option value="25%">25%</option>
+                                                        <option value="50%">50%</option>
+                                                        <option value="75%">75%</option>
+                                                        <option selected="selected" value="100%">100%</option>
+                                                        <option value="125%">125%</option>
+                                                        <option value="150%">150%</option>
+                                                        <option value="200%">200%</option>
+                                                        <option value="400%">400%</option>
+                                                        <option value="actual size">Actual size</option>
+                                                        <option value="fit page">Fit page</option>
+                                                        <option value="fit width">Fit width</option>
+                                                        <option value="fit height">Fit height</option>
+                                                    </select><span><input type="checkbox" id="c1reportviewer_continuousview_0" class="continuousview" /><label
+                                                        for="c1reportviewer_continuousview_0">continuous view</label></span><span><input
+                                                            type="checkbox" id="c1reportviewer_fullscreenmode_1" class="fullscreenmode" /><label
+                                                                for="c1reportviewer_fullscreenmode_1">full screen</label></span></div>
+    <div id="ctl15" class="__c1splitter  c1-c1reportviewer-splitter" style="height: 250px;
+        width: 400px;">
+        <div>
+            <div class="c1-c1reportviewer-tabs">
+                <ul>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="wijmo-wijreportviewer-reportpane">
+                <center class="wijmo-wijreportviewer-content">
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="c1-c1reportviewer-statusbar">
+    </div>
+</div>
+    </div>
+@Html.Hidden("HFReportFileName", (string)ViewBag.ReportFileName, new { id = "HFReportFileName" })

@@ -1,0 +1,128 @@
+﻿@model IList<Movies.Models.Datagrid>
+
+@{ 
+    ViewBag.Title = "Movie List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Movies.Models.SortingPagingInfo info = ViewBag.SortingPagingInfo;
+    Movies.Models.Movie mv = ViewBag.Movie;
+    Movies.Models.MovieV mvV = ViewBag.MovieSrchVars;
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //alert("Welcome to ready");
+        $(".GridHeader").click(function (evt) {
+            //alert("GridHeader clicked");
+            var sortfield = $(evt.target).data("sortfield");
+            //alert($("#SortDirection").val());
+            //alert($("#SortField").val());
+            //alert(sortfield);
+
+            if ($("#SortField").val() == sortfield) {
+                if ($("#SortDirection").val() == "ascending") {
+                    $("#SortDirection").val("descending");
+                }
+                else {
+                    $("#SortDirection").val("ascending");
+                }
+            }
+            else {
+                $("#SortField").val(sortfield);
+                $("#SortDirection").val("ascending");
+            }
+
+            //alert("b4 evt.PreventDefault()");
+            evt.stopPropagation();
+            //evt.PreventDefault();
+            //alert("b4 submit");
+            //alert("b4 submit: " + $("#SortDirection").val());
+            //var sortdir = $("#SortDirection").val();
+            $("form").submit();
+            //alert("af submit: " + $("#SortDirection").val());
+            //alert("af submit");
+        });
+
+        $(".GridPager").click(function (evt) {
+            var pageindex = $(evt.target).data("pageindex");
+            $("#CurrentPageIndex").val(pageindex);
+            evt.stopPropagation();
+            //evt.PreventDefault();
+            $("form").submit();
+        });
+    });
+</script>
+
+@using (Html.BeginForm("Datagrid", "Home", FormMethod.Post))
+{
+    @Html.Hidden("SortField", info.SortField)
+    @Html.Hidden("SortDirection", info.SortDirection)
+    @Html.Hidden("PageCount", info.PageCount)
+    @Html.Hidden("PageSize", info.PageSize)
+    @Html.Hidden("CurrentPageIndex", info.CurrentPageIndex)
+    @Html.Hidden("id", mv.MovieID)
+    @Html.Hidden("strMovieTitle", mvV.strMovieTitle)
+    @Html.Hidden("strActorName", mvV.strActorName)
+    @Html.Hidden("strCrewName", mvV.strCrewName)
+    @Html.Hidden("intCrewTitleID", mvV.intCrewTitleID)
+    <table class="Grid" align="center" width="600">
+        <tr>
+            <th class="GridHeader"><a onclick='@Url.Action("Datagrid", "Home")' data-sortfield="MovieTitle" class="GridHeader">MOVIE</a></th>
+            <th class="GridHeaderNoSort">DESCRIPTION</th>
+        </tr>
+
+        @{int i = 1;}
+        @{int intTempj = 0;}
+        @{bool blnCont;}
+
+        @foreach (var item in Model)
+        {
+            <tr class="@(i++ % 2 == 0 ? "GridItem" : "GridAltItem")">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+        }
+
+        <tr>
+            <td colspan="2">
+                <table width="600">
+                    @while (intTempj < info.PageCount)
+                    {
+                        <tr>
+                            @for (var j = intTempj; j < info.PageCount; j++)
+                            {
+                                blnCont = false;
+
+                                if (j == info.CurrentPageIndex)
+                                {
+                                    <td><span class="GridPgNum">@(j + 1)</span></td>
+                                }
+                                else
+                                {
+                                    <td><span class="GridPager"><a onclick="@Url.Action("List", "Home")" data-pageindex="@j" class="GridPager">@(j + 1)</a></span></td>
+                                }
+
+                                if (((j + 1) % 20) == 0 && j > 0)
+                                {
+                                    intTempj = j + 1;
+                                    blnCont = true;
+                                    break;
+                                }
+
+                                if (j == (info.PageCount-1))
+                                {
+                                    intTempj = info.PageCount;
+                                    break;
+                                }
+                            }
+
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+    </table>
+}

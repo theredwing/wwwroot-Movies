@@ -1,0 +1,51 @@
+﻿<script src="~/js/ListProducts.js"></script>
+@model AdventureWorks.Models.ProductsModel
+<input id="callbackRef" type="text" style="display:none"/>
+<div class="yui-gf">
+            <div class="yui-u">                
+                <div id="C1CarouselListProducts" style="height:555px;" class="Testing"></div>
+                    <div id="PnlEmptyList">
+                    <h3>
+                        Out of Stock</h3>
+                    <p>
+                        Sorry, we do not have any products that match your criteria. Please make a different selection or try back again soon!</p>
+                </div> 
+                </div>                       
+            <div class="yui-u first">
+                <fieldset>
+                    <legend>Find a Product</legend>
+                    <div class="Filter">
+                        <div id="PnlColor" runat="server" style="visibility:@Model.ColorDivVisibility;">
+                            <h3>
+                                @Html.Label("LblColor","Color",new {id="LblColor",@class="C1ColorComboLabel"})
+                            </h3>
+                            <div class="C1ColorComboContainer">
+                                @Html.DropDownList("C1ComboColorPick", new SelectList(Model.ProductColorsList, "", ""), new { id = "C1ComboColorPick", @class = "C1ColorCombo", style = "width:150px;" })
+                            </div>
+                        </div>
+                        <div id="PnlSize" style="visibility:@Model.SizeDivVisibility;">
+                        <h3>@Html.Label("LblSize", "Size: All", new { id = "LblSize", @class = "C1SizeSliderLabel" })</h3>
+                        <div id="PnlSizeSlider">
+                            <div id="ItmSize" class="C1SizeSliderContainer">
+                            <div id="C1SliderSize" style="height:30px;" class="C1SizeSlider"></div>
+                            <input id="tbSizeValue" type="text" style="display:none"/>
+                        </div>
+                            </div>
+                            </div>
+                        <div id="PnlWeight" style="visibility:@Model.WeightDivVisibility;">
+                        <h3 id="hWeight" runat="server" visible="false">
+                            @Html.Label("LblWeight","Weight",new {id="LblWeight",@class="C1WeightComboLabel"})
+                        </h3>
+                        <div id="ItmWeight" runat="server" class="C1WeightComboContainer">
+                            @Html.DropDownList("C1ComboWeightPick", new SelectList(Model.ProductWeightsList, "", ""), new { id = "C1ComboWeightPick", @class = "C1WeightCombo", style = "width:150px;" })
+                        </div>
+                            </div>
+                    </div>
+                </fieldset>
+            </div>        
+</div>
+@Html.Hidden("HFColorDivVisibility", Model.ColorDivVisibility, new { id = "HFColorDivVisibility" })
+@Html.Hidden("HFWeightDivVisibility", Model.WeightDivVisibility, new { id = "HFWeightDivVisibility" })
+@Html.Hidden("HFProductSizeMin", Model.ProductSizeMin, new { id = "HFProductSizeMin" })
+@Html.Hidden("HFProductSizeMax", Model.ProductSizeMax, new { id = "HFProductSizeMax" })
+@Html.Hidden("HFProductCategoryId", Model.ProductCategoryId, new { id = "HFProductCategoryId" })

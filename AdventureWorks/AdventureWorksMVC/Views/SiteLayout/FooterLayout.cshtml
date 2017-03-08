@@ -1,0 +1,33 @@
+﻿@model AdventureWorks.Models.SiteLayoutModel
+<script src="@Url.Content("~/js/FooterLayout.js")"></script>    
+<div id="ft">
+	<div class="footerinner">
+        <div id="PnlExpFooter">
+            <div id="Header">SiteMap</div>
+            <div>
+                @Html.Raw(Model.SiteMapHTML)
+            </div>
+        </div>
+	</div>
+</div>
+<div class="copyright">
+	<div class="copyrightinner">
+		<div class="copyrighttext">
+			<p>
+				Studio for ASP.NET Wijmo delivers a complete development toolkit for creating and styling modern Web applications powered by the core wijmo technology. Built with HTML5, jQuery, jQuery Mobile, CSS3, and SVG. Studio for ASP.NET Wijmo controls make your applications ready for today's web.
+			</p>
+			<p>
+				©1987-                
+                @DateTime.Today.Year.ToString()
+                ComponentOne LLC All Rights Reserved
+			</p>
+		</div>
+		<div class="c1logo">
+			<a href="http://www.componentone.com/SuperProducts/ASPNET-Web-Forms-Controls/">
+				<img src="@Url.Content("~/Images/c1wijmologo.png")" alt="C1" style="border-width: 0px;">
+			</a>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>

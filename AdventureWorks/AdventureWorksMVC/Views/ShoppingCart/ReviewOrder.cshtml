@@ -1,0 +1,99 @@
+﻿<script src="~/js/ReviewOrder.js"></script>
+@model AdventureWorks.Models.ReviewOrderModel
+@{
+    ViewBag.Title = "AdventureWorks Cycles - Shopping Cart";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+<div class="shoppingcart">
+        @Html.Partial("_OrderProgress", new ViewDataDictionary { { "OrderStep", 4 }})
+    <table id="gvOrderDetails" style="width:950px;"></table>
+        <div class="cartinfo">
+            <h6>
+                Sub-Total:</h6>
+            <div class="item subtotal">
+                @Model.Subtotal
+            </div>
+            <h6>
+                Shipping:</h6>
+            <div class="item shipping">
+                @Model.Feight
+            </div>
+            <div id="phTaxTotal">
+                <h6>
+                    Tax:</h6>
+                <div class="item tax">
+                    <span class="productPrice">$0</span>                    
+                </div>
+            </div>
+            <div class="total">
+                <h6>
+                    Total:</h6>
+                <div class="item totalinner">
+                    @Model.TotalDue
+                </div>
+            </div>
+        </div>
+        <div class="BillTo">
+        <fieldset>
+            <legend>Bill To</legend>
+            <ul>
+                <li class="BillName">
+                    <span class="BillFirstName">@Model.BillFirstName</span>
+                    <span class="BillLastName">@Model.BillLastName</span>
+                </li>
+                <li class="CreditCardType">
+                    @Model.BillCreditCardType
+                </li>
+                <li class="CreditCardNumber">
+                    @Model.BillCreditCardNumber
+                </li>
+                <li class="CreditCardExpire">
+                    @Model.BillCreditCardExpire
+                </li>
+                <li class="BillAddress">
+                    @Model.BillAddressLine1
+                </li>
+                <li>
+                    @Model.BillAddressLine2
+                </li>
+                <li>
+                    @Model.BillAddress
+                </li>
+            </ul>
+        </fieldset>
+        </div>
+        <div class="ShipTo">
+        <fieldset>
+            <legend>Ship To</legend>
+            <ul>
+                <li>
+                    <span class="ShipFirstName">@Model.ShipFirstName</span>
+                    <span class="ShipLastName">@Model.ShipLastName</span>
+                </li>
+                <li>
+                    @Model.ShipAddressLine1
+                </li>
+                <li>
+                    @Model.ShipAddressLine2
+                </li>
+                <li>
+                    @Model.ShipAddress
+                </li>
+                <li>
+                    @Model.ShipPhone
+                </li>
+                <li>
+                    @Model.ShipEmail
+                </li>
+            </ul>
+        </fieldset>
+        </div>
+        <div class="CheckOutFooter">
+            <div class="right">
+                <input type="button" id="btnNext" value="Complete Order" class="NextButton" onclick="btnNext_Click();" />
+            </div>
+            <div class="right">
+                <input type="button" id="btnBack" value="Back" class="BackButton" onclick="btnBack_Click();" />
+            </div>
+        </div>
+    </div>

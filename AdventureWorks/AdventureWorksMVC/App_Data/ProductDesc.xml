@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NwindDataSet xmlns="http://tempuri.org/NwindDataSet.xsd">
+  <xs:schema id="NwindDataSet" targetNamespace="http://tempuri.org/NwindDataSet.xsd" xmlns:mstns="http://tempuri.org/NwindDataSet.xsd" xmlns="http://tempuri.org/NwindDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="NwindDataSet" msdata:IsDataSet="true" msdata:MainDataTable="http_x003A__x002F__x002F_tempuri.org_x002F_NwindDataSet.xsd_x003A_CategorySalesByQuarter" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ProductDesc">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SubCategoryId" type="xs:string" minOccurs="0" />
+                <xs:element name="DescName" type="xs:string" minOccurs="0" />
+                <xs:element name="DescValue" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+
+    <ProductDesc>
+        <SubCategoryId>1</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>15</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>1</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>24</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>1</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>33</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>1</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>34</DescValue>
+    </ProductDesc>
+
+    <ProductDesc>
+        <SubCategoryId>2</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>25</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>2</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>28</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>2</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>22</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>2</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>10</DescValue>
+    </ProductDesc>
+
+    <ProductDesc>
+        <SubCategoryId>3</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>27</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>3</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>45</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>3</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>73</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>3</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>37</DescValue>
+    </ProductDesc>
+
+    <ProductDesc>
+        <SubCategoryId>4</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>17</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>4</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>23</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>4</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>16</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>4</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>23</DescValue>
+    </ProductDesc>
+    
+  <ProductDesc>
+    <SubCategoryId>5</SubCategoryId>
+    <DescName>Speed</DescName>
+    <DescValue>70</DescValue>
+  </ProductDesc>
+  <ProductDesc>
+    <SubCategoryId>5</SubCategoryId>
+    <DescName>Rugged</DescName>
+    <DescValue>12</DescValue>
+  </ProductDesc>
+  <ProductDesc>
+    <SubCategoryId>5</SubCategoryId>
+    <DescName>Smooth</DescName>
+    <DescValue>90</DescValue>
+  </ProductDesc>
+  <ProductDesc>
+    <SubCategoryId>5</SubCategoryId>
+    <DescName>Shocks</DescName>
+    <DescValue>10</DescValue>
+  </ProductDesc>
+
+
+    <ProductDesc>
+        <SubCategoryId>6</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>20</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>6</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>10</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>6</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>80</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>6</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>40</DescValue>
+    </ProductDesc>
+    
+    <ProductDesc>
+        <SubCategoryId>7</SubCategoryId>
+        <DescName>Speed</DescName>
+        <DescValue>40</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>7</SubCategoryId>
+        <DescName>Rugged</DescName>
+        <DescValue>50</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>7</SubCategoryId>
+        <DescName>Smooth</DescName>
+        <DescValue>80</DescValue>
+    </ProductDesc>
+    <ProductDesc>
+        <SubCategoryId>7</SubCategoryId>
+        <DescName>Shocks</DescName>
+        <DescValue>90</DescValue>
+    </ProductDesc>
+</NwindDataSet>

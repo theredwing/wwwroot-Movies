@@ -1,0 +1,1234 @@
+﻿html
+{
+    background: #f2f2f2;
+}
+body, body .ui-widget
+{
+    background: #f2f2f2;
+    color: #333;
+    font-family: Segoe UI, Myriad, Myriad Pro, Calibri, Arial, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+a, a:link, a:active, a:visited
+{
+    color: #04b2ef;
+    text-decoration: none;
+}
+a:hover, a:focus
+{
+    color: #04b2ef;
+    text-decoration: underline;
+}
+fieldset
+{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    padding: .5em;
+}
+legend
+{
+    margin: 0 .5em;
+}
+label
+{
+    display: block;
+}
+.homepage
+{
+    background: #646464;
+}
+.homepage #bd
+{
+    min-height: 120px;
+}
+#hd
+{
+    background: #646464 url(images/header_bg.png) no-repeat center top;
+    display: block;
+    padding: 0;
+    position: relative;
+    zoom: 1;
+}
+.homepage #hd
+{
+    height: 567px;
+}
+#bd
+{
+    min-height: 500px;
+}
+
+
+#ft
+{
+    background: #333;
+    clear: both;
+    color: #fafafa;
+    font-size: .9em;
+    margin: 1em 0 0;
+    padding: 0 0 1em;
+    text-align: left;
+}
+.footerinner
+{
+    margin: 0 auto;
+    padding: 10px;
+    width: 960px;
+}
+#hd h2
+{
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+#hd h2 a, #hd h2 a:active, #hd h2 a:hover, #hd h2 a:focus #hd h2 a:visited
+{
+    color: #fff;
+    outline: none;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+#hd #mainMenuContainer .wijmo-wijmenu
+{
+    background: #333;
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius:0;
+    border:none;
+    border-bottom: solid 3px #04b2ef;
+}
+#hd #mainMenuContainer .wijmo-wijmenu .wijmo-wijmenu-list
+{
+    margin: 0 auto;
+    padding: 0;
+    width: 960px !important;
+    
+}
+#hd #mainMenuContainer .wijmo-wijmenu .wijmo-wijmenu-list .wijmo-wijmenu-item
+{
+    margin: 0;
+    padding: 0 .25em;
+}
+#hd .wijmo-wijmenu .wijmo-wijmenu-link
+{
+    color: #fafafa;
+    font-size: 1.2em;
+    line-height: 1;
+    margin: 5px .25em 0;
+    outline: none;
+    padding: .75em;
+    text-decoration: none;
+    border:none;
+}
+#hd #mainMenuContainer .wijmo-wijmenu .wijmo-wijmenu-link:hover
+{
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    background: #686868;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+}
+
+#hd #mainMenuContainer .wijmo-wijmenu .currentmenu
+{
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    background: #04b2ef;
+    border-radius: 3px 3px 0 0;
+    color: #fff;
+    font-weight: 700;
+}
+#hd #mainMenuContainer .wijmo-wijmenu .currentmenu:hover
+{
+    background: #04b2ef;
+}
+
+
+#hd #mainMenuContainer .wijmo-wijmenu .wijmo-wijmenu-link:hover, #hd #mainMenuContainer .wijmo-wijmenu .wijmo-wijmenu-link:focus
+{
+    outline: none;
+}
+
+#hd #subMenuContainer .wijmo-wijmenu
+{
+    background: #04b2ef;
+    border:none;
+    border-radius:0;
+    padding:0;
+}
+
+#hd #subMenuContainer .wijmo-wijmenu .wijmo-wijmenu-list{
+    width:950px;
+    margin:0 auto;
+}
+
+#hd #subMenuContainer .wijmo-wijmenu .wijmo-wijmenu-link
+{
+     -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 1.15em;
+    margin: 0 .1em;
+    outline: none;
+    padding: .5em .25em;
+    text-decoration: none;
+}
+
+#hd #subMenuContainer .wijmo-wijmenu .currentsubmenu
+{
+    color: #fff;
+    font-weight: 700;
+}
+
+#hd .hd-links
+{
+    height: 16px;
+    line-height: 16px;
+    padding: 3px;
+}
+#hd .hd-links a:link, #hd .hd-links a, #hd .hd-links a:hover, #hd .hd-links a:active, #hd .hd-links a:focus, #hd .hd-links a:visited
+{
+    color: #fafafa;
+    text-shadow: 0 0 3px #333;
+}
+#hd .hd-links-wrapper .hd-links
+{
+    text-align: right;
+}
+#hd .hd-links-wrapper .hd-links ul li
+{
+    color: #fff;
+    display: inline;
+    list-style: none outside none;
+    padding-right: 5px;
+}
+#hd .hd-links-wrapper .hd-links .hd-ico-register
+{
+    background: url(images/ico-register.gif) no-repeat scroll 0 2px transparent;
+    padding-left: 20px;
+}
+#hd .hd-links-wrapper .hd-links .hd-ico-login
+{
+    background: url(images/ico-login.png) no-repeat scroll 0 2px transparent;
+    padding-left: 20px;
+}
+#hd .hd-links-wrapper .hd-links .hd-ico-cart
+{
+    background: url(images/ico-cart.png) no-repeat scroll 0 2px transparent;
+    padding-left: 20px;
+}
+.content
+{
+    margin: 0;
+    padding: 0;
+}
+.quart
+{
+    float: left;
+    width: 25%;
+}
+.working
+{
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background: #fff;
+    border-radius: 5px;
+    bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    display: block;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    z-index: 999;
+}
+.SubCategory .wijmo-wijcarousel-item a
+{
+    background: #fff;
+    display: block;
+    float: left;
+    margin: 1em;
+}
+
+.SubCategory .wijmo-wijcarousel-item a .SubCategoryChart{
+    margin:1em;
+}
+
+body .wijmo-wijtooltip-pointer{
+    border-color:#85b2cb;
+    border-width:1px;
+}
+
+body .wijmo-wijtooltip-pointer .wijmo-wijtooltip-pointer-inner{
+    border-top-color:#f2f2f2 !important;
+}
+
+
+.OrderProgress
+{
+    height: 40px;
+    margin: 10px auto;
+    text-align: center;
+}
+.OrderProgress ul
+{
+    margin: 0;
+    padding: 0;
+}
+.OrderProgress ul li
+{
+    display: inline;
+    list-style: none;
+    padding: 5px 20px 0;
+}
+.OrderProgress ul li .ActiveStep
+{
+    background: url(images/progress-step-active.gif) no-repeat 50% 50%;
+    color: #6a6a6a;
+    padding-bottom: 40px;
+    padding-right: 1px;
+}
+.OrderProgress ul li .InactiveStep
+{
+    background: url(images/progress-step-inactive.gif) no-repeat 50% 50%;
+    color: #d7d7d7;
+    padding-bottom: 40px;
+    padding-right: 1px;
+}
+.sidebar
+{
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background: #E8EAEE;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    margin: .5em 0 .5em .5em;
+    min-height: 300px;
+    padding: .5em;
+}
+.loading
+{
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background: #ff9 url(images/FadeLightShort.png) repeat-x top left;
+    border: solid 1px #fc0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    font-size: 1.2em;
+    line-height: 1;
+    margin: 3px;
+    outline: none;
+    padding: 4px;
+}
+.error
+{
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background: #ff9 url(images/FadeLightShort.png) repeat-x top left;
+    border: solid 1px #fc0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    color: #900;
+    font-size: .9em;
+    line-height: 1;
+    margin: 3px;
+    outline: none;
+    padding: 4px;
+}
+.grid
+{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: solid 1px #999;
+    border-radius: 5px;
+}
+.grid > table
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.grid th, .grid td
+{
+    border: none;
+    border-collapse: collapse;
+}
+.grid th
+{
+    font-size: 1.2em;
+    line-height: 1;
+}
+.grid > table > tbody > tr:nth-child(odd)
+{
+    background: #E8EAEE;
+}
+.grid > table > tbody > tr:hover
+{
+    background: #0cf url(images/FadeLightShort.png) repeat-x top left;
+}
+.flowlist li
+{
+    display: block;
+    float: left;
+    margin: .2em;
+    padding: .5em;
+}
+.products li
+{
+    height: 120px;
+    text-align: center;
+    width: 140px;
+}
+
+.SubCategoryName
+{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 700;
+}
+.island
+{
+    background: transparent url(Images/island.png) no-repeat center center;
+    display: block;
+    height: 580px;
+    margin: 0 auto;
+    position: absolute;
+    top: 120px;
+    width: 960px;
+}
+.island h1
+{
+    color: #fff;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 700;
+    text-shadow: 0 0 10px #000;
+}
+.mountain
+{
+    background: transparent url(images/mountain.png) no-repeat left;
+    cursor: pointer;
+    display: block;
+    height: 142px;
+    left: 698px;
+    position: absolute;
+    top: 135px;
+    width: 257px;
+}
+.road
+{
+    background: transparent url(images/road.png) no-repeat left;
+    cursor: pointer;
+    height: 132px;
+    left: 390px;
+    position: absolute;
+    top: 172px;
+    width: 219px;
+}
+.touring
+{
+    background: transparent url(images/touring.png) no-repeat left;
+    cursor: pointer;
+    display: block;
+    height: 227px;
+    left: 221px;
+    position: absolute;
+    top: 39px;
+    width: 191px;
+    z-index: 2;
+}
+.island .mountain_tooltip h1
+{
+    margin: 0 auto;
+    padding: 26px 0;
+    width: 83px;
+}
+.island .road_tooltip h1
+{
+    margin: 0 auto;
+    padding: 26px 0;
+    width: 73px;
+}
+.island .touring_tooltip h1
+{
+    margin: 0 auto;
+    padding: 26px 0;
+    width: 42px;
+}
+.mountain_tooltip
+{
+    background: transparent url(images/mountain_tooltip.png) no-repeat top;
+    display: block;
+    height: 130px;
+    left: 790px;
+    position: absolute;
+    top: 103px;
+    width: 157px;
+    z-index: 1;
+}
+.road_tooltip
+{
+    background: transparent url(images/road_tooltip.png) no-repeat top;
+    display: block;
+    height: 130px;
+    left: 426px;
+    position: absolute;
+    top: 123px;
+    width: 173px;
+    z-index: 1;
+}
+.touring_tooltip
+{
+    background: transparent url(images/touring_tooltip.png) no-repeat top;
+    display: block;
+    height: 130px;
+    left: 97px;
+    position: absolute;
+    top: 96px;
+    width: 157px;
+    z-index: 1;
+}
+.bikes_button
+{
+    background: transparent url(images/home_tooltip_noarrow.png) no-repeat center center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+    height: 49px;
+    line-height: 49px;
+    padding: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+.bikes_button a
+{
+    color: #fff;
+}
+.bikes_button:hover
+{
+    background: transparent url(images/home_tooltip_hover.png) no-repeat center center;
+}
+a:hover .mountain
+{
+    background: transparent url(images/mountain.png) no-repeat right;
+}
+a:hover .road
+{
+    background: transparent url(images/road.png) no-repeat right;
+}
+a:hover .touring
+{
+    background: transparent url(images/touring.png) no-repeat right;
+}
+.C1ChartContainer
+{
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -20px;
+    width: 200px;
+}
+
+.chartlabel
+{
+    color: #04b2ef;
+    font-size: .8em;
+}
+.SubCategory .C1PreviousButton
+{
+    background: transparent url(images/arrow_left.png) no-repeat center;
+    display: block;
+    float: left;
+    height: 32px;
+    left: -40px;
+    position: absolute;
+    top: 95px;
+    width: 29px;
+}
+.SubCategory .C1NextButton
+{
+    background: transparent url(images/arrow_right.png) no-repeat center;
+    display: block;
+    float: right;
+    height: 32px;
+    position: absolute;
+    right: -40px;
+    top: 95px;
+    width: 29px;
+}
+.Components #hd #doc2, .Clothing #hd #doc2, .Accessories #hd #doc2
+{
+    height: 150px;
+}
+.Bikes #hd
+{
+    background: #646464 url(images/bikes_header.png) no-repeat top center;
+}
+.MountainBikes #hd
+{
+    background: #646464 url(images/mountains_header.png) no-repeat top center;
+}
+.RoadBikes #hd
+{
+    background: #646464 url(images/road_header.png) no-repeat top center;
+}
+.TouringBikes #hd
+{
+    background: #646464 url(images/touring_header.png) no-repeat top center;
+}
+.Bikes #hd #doc2
+{
+    height: 300px;
+}
+.ToolTipLabelName
+{
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+.ToolTipLabelPrice
+{
+    background: #04b2ef;
+    color: #fff;
+    float: right;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 700;
+    text-align:right;
+    margin: 7px 0;
+    padding: 5px;
+    width: 40%;
+}
+.ToolTipTable
+{
+    font-size: 1.2em;
+    margin: 5px;
+}
+.description
+{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.description li
+{
+    float: left;
+    list-style: none;
+    width: 50%;
+}
+.C1ttScrollContainer
+{
+    position: relative;
+    top: -20px;
+}
+
+.content .BackButton, .content .NextButton,
+.content .ShoppingCartContinueButton, .content .ShoppingCartCheckOutButton, 
+.ButtonContainer .ButtonContinue, .ButtonContainer .ButtonCheckOut, 
+.content .LoginButton, .content .SignUpButton,
+.wijmo-wijgrid-innercell input[type='button'], .wijmo-wijgrid-innercell input[type='submit']
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #04b2ef;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-weight: 700;
+    padding: 5px;
+}
+.ButtonContinue
+{
+    margin: 0 0 0 5px;
+}
+.content .ShoppingCartContinueButton, .content .ShoppingCartCheckOutButton
+{
+    float: none;
+}
+
+.content .BackButton:hover, .content .NextButton:hover,
+.content .ShoppingCartContinueButton:hover, .content .ShoppingCartCheckOutButton:hover, 
+.ButtonContainer .ButtonContinue:hover, .ButtonContainer .ButtonCheckOut:hover, 
+.content .LoginButton:hover, .content .SignUpButton:hover,
+.wijmo-wijgrid-innercell input[type='submit']:hover, .wijmo-wijgrid-innercell input[type='button']:hover
+{
+    background: #00a4db;
+}
+
+.content .BackButton:active, .content .NextButton:active,
+.content .ShoppingCartContinueButton:active, .content .ShoppingCartCheckOutButton:active, 
+.ButtonContainer .ButtonContinue:active, .ButtonContainer .ButtonCheckOut:active, 
+.content .LoginButton:active, .content .SignUpButton:active,
+.wijmo-wijgrid-innercell input[type='submit']:active, .wijmo-wijgrid-innercell input[type='button']:active
+{
+    background: #007aa3;
+    outline: none;
+}
+
+.buttonbox
+{
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    width: 300px;
+}
+.buttonbox h2
+{
+    margin: 0 5px;
+    text-align: right;
+}
+.hd-ico-cartItems
+{
+    -moz-border-radius: 0 0 3px 3px;
+    -moz-box-shadow: 0 0 3px #333;
+    -webkit-border-radius: 0 0 3px 3px;
+    -webkit-box-shadow: 0 0 3px #333;
+    background: rgba(0,0,0,0.5);
+    border: solid 1px #000;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 0 3px #333;
+    color: #fff;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+.ShoppingFooter
+{
+    clear: both;
+    padding: 5px;
+    text-align: right;
+}
+.cartinfo h6, .cartinfo .item
+{
+    height: 30px;
+    line-height: 24px;
+}
+.cartinfo h6
+{
+    border-top: dashed 1px #cbcbcb;
+    float: left;
+    font-weight: 700;
+    margin: 0 20px 0 0;
+    text-align: right;
+    width: 85%;
+}
+.cartinfo .alt
+{
+    background: #fafafa;
+}
+
+.totalinner
+{
+    background: #333;
+    border-bottom: solid 3px #04b2ef;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 0 19px 0 0;
+    width: 94px;
+}
+.total h6
+{
+    background: #333;
+    border-bottom: solid 3px #04b2ef;
+    border-top: none;
+    color: #fff;
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+
+body .wijmo-wijdialog .ui-dialog-content
+{
+    width:580px !important;
+}
+
+
+.ShoppingCartFrame
+{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.WindowShoppingCartProductName
+{
+    float: right;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 50%;
+}
+.ProductMsg
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #FBF9EE;
+    border: 1px solid #FCEFA1;
+    border-radius: 4px;
+    color: #363636;
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 0 1em;
+    padding: 5px;
+}
+#c1modallayer
+{
+    opacity: 0.5 !important;
+}
+.ShoppingCartFrame .C1GridView_Windows7
+{
+    margin: 15px 0 20px;
+}
+.MainProductImage
+{
+    -moz-border-radius: 4px;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    background: #fff;
+    border: solid 1px #999;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    float: left;
+    margin: 10px auto;
+    padding: 10px;
+    width: 36%;
+}
+.ProductDescription
+{
+    float: right;
+    width: 58%;
+}
+.ProductDescription h1
+{
+    border-bottom: solid 3px #04b2ef;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 0;
+}
+.ProductPrice
+{
+    background: #04b2ef;
+    color: #fff;
+    font-size: 1.25em;
+    height: 33px;
+    line-height: 33px;
+    margin: 0;
+    padding: 5px;
+    *width: 398px;
+}
+.ProductSpecsContainer
+{
+    float: left;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.ProductPrice .LoginButton
+{
+    *position: relative;
+    *top: -34px;
+}
+
+.ProductSpecsContainer li
+{
+    background: #ddd;
+    border: solid 1px #ccc;
+    float: left;
+    list-style: none;
+    margin: 3px 0;
+    padding: 10px 5px;
+    width: 71%;
+}
+
+
+
+.ProductSpecsContainer li:hover
+{
+    background: #04b2ef;
+    color: #fff;
+}
+.ProductSpecsContainer .ProductSpecsColorLabel, .ProductSpecsContainer .ProductSpecsSizeLabel, .ProductSpecsContainer .ProductSpecsWeightLabel
+{
+    background: none;
+    border: none;
+    font-weight: 700;
+    text-align: left;
+    width: 23%;
+}
+.ProductSpecsContainer .ProductSpecsColorLabel:hover, .ProductSpecsContainer .ProductSpecsSizeLabel:hover, .ProductSpecsContainer .ProductSpecsWeightLabel:hover
+{
+    background: none;
+    color: #333;
+}
+.ProductModelContainer .ProductModelSizeLabel
+{
+    background: none;
+    border: none;
+    border-top: dashed 1px #ccc;
+    color: #333;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+body .wijmo-wijexpander{
+    border:none;
+    background-color:#04b2ef;
+     border-radius:4px;
+}
+body .wijmo-wijexpander .ui-expander-header{
+   border:none;
+    background: #04b2ef;
+}
+
+#ft .wijmo-wijexpander .ui-expander-header a, #ft .wijmo-wijexpander .ui-expander-header a:link, .wijmo-wijexpander .ui-expander-header a, .wijmo-wijexpander .ui-expander-header a:link{
+    color:#fff;
+}
+
+.wijmo-wijexpander h3{
+    margin:0;
+}
+
+
+.C1eContent
+{
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    background: #fafafa;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden !important;
+    padding: 5px;
+}
+.yui-ge .yui-u, .yui-gf div.first
+{
+    background: #ddd;
+    margin: 10px 0;
+    padding: 5px;
+}
+.yui-ge div.first, .yui-gf .yui-u
+{
+    width: 74.2%;
+}
+.Filter h3
+{
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    background: #04b2ef;
+    border-radius: 4px 4px 0 0;
+    clear: both;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 5px;
+}
+.C1ColorComboContainer, .C1SizeSliderContainer, .C1WeightComboContainer
+{
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    margin: 0 0 10px;
+    padding: 5px;
+}
+.currentsize
+{
+    background: #04b2ef;
+    color: #fff;
+    padding: 0 3px;
+}
+
+.wijmo-wijslider-horizontal{
+    background: transparent url(images/grid.png) no-repeat center;
+    float: none;
+    margin: 0 auto;
+}
+
+.wijmo-wijslider-horizontal .ui-slider-horizontal{
+    height:5px !important;
+    border-radius:0;
+    top:5px !important;
+}
+
+.wijmo-wijslider-horizontal .ui-slider-horizontal .ui-slider-handle{
+    border-radius:0;
+}
+
+.ListProductsImage
+{
+    background: #fff;
+    border: solid 1px #ccc;
+    display: block;
+    margin: 10px auto;
+    padding: 20px;
+    width: 110px;
+}
+.ListProductHeader
+{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    top: -10px;
+    width: 142px;
+    z-index: 999;
+}
+
+.C1pvContent
+{
+    background: #fff;
+    min-height: 548px;
+    padding: 7px 3px;
+}
+.SubCategory .C1pvContent
+{
+    min-height: 100px;
+    padding: 0;
+}
+.C1pvOuter
+{
+    background: transparent url(images/multipage_shadow.png) no-repeat center bottom;
+    padding-bottom: 17px;
+}
+
+.CheckOutFooter .right
+{
+    float: right;
+    margin: 3px;
+}
+.SubCategory .yui-gc div.first, .yui-gd .yui-u
+{
+    width: 100%;
+}
+
+.Components .C1ChartContainer, .Clothing .C1ChartContainer, .Accessories .C1ChartContainer
+{
+    display: none;
+    visibility: hidden;
+}
+.C1Link .C1PreviousButton
+{
+    background: transparent url(images/arrow_left.png) no-repeat center;
+    display: block;
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+.C1Link .C1NextButton
+{
+    background: transparent url(images/arrow_right.png) no-repeat center;
+    display: block;
+    float: right;
+    height: 32px;
+    width: 32px;
+}
+.C1PageInfo
+{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+.BikesMenu, .ComponentsMenu, .ClothingMenu, .AccessoriesMenu
+{
+    float: left;
+    width: 25%;
+}
+.copyright
+{
+    background: #04b2ef;
+    border-top: solid 3px #04b2ef;
+    clear: both;
+}
+.copyrightinner
+{
+    color: #fafafa;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: right;
+    width: 960px;
+}
+.c1logo
+{
+    float: right;
+    width: 30%;
+}
+.copyrighttext
+{
+    float: left;
+    width: 70%;
+}
+#ft h1
+{
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+#ft a:link, #ft a, .copyright a:link, .copyright a
+{
+    color: #04b2ef;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: 100;
+}
+.homepage #hd #mainMenuContainer, .homepage #hd #subMenuContainer, .islandcontainer, .ToolTipLabelSpecs, .C1Window .C1wHeading, .C1Window .C1wFooter, .ProductModelDescriptionValue
+{
+    display: none;
+}
+
+#hd .hd-links-wrapper .hd-links ul, .C1Window .C1GridView_Windows7, .BikesMenu ul, .ComponentsMenu ul, .ClothingMenu ul, .AccessoriesMenu ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.SubCategory .C1MultiPage, .bikes_button h1, #ctl00_MainContent_ctl00_statExpander_hdr .C1eContent, #ctl00_MainContent_ctl00_statExpander_cnt .C1eContent, .C1WeightComboContainer
+{
+    margin: 0;
+}
+.SubCategory, .ListProductBlock
+{
+    position: relative;
+}
+.flowlist, .BikesMenu li, .ComponentsMenu li, .ClothingMenu li, .AccessoriesMenu li
+{
+    list-style: none;
+}
+
+.island a:hover, .bikes_button a:hover
+{
+    text-decoration: none;
+}
+
+.remember, .cartinfo .item, .ProductImage
+{
+    float: left;
+}
+.ProductTab, .DescriptionContainer
+{
+    clear: both;
+    margin: 10px 0;
+}
+
+.CheckOutFooter, .BillAddress, .clear
+{
+    clear: both;
+}
+
+.RegisterBlock, .ShippingInfo, .ShipTo, .PaymentInfo,
+.LoginBlock, .BillInfo, .ShippingDate, .BillTo
+{
+	margin-top: 10px;
+    float: right;
+    width: 48%;
+}
+
+.LoginBlock, .BillInfo, .ShippingDate, .BillTo
+{
+    float: left;
+}
+
+.LoginBlock label, .RegisterBlock label
+{
+	font-style: italic;
+	font-size: 1.1em;
+	white-space: normal;
+}
+
+.LoginBlock input, .RegisterBlock input
+{
+	padding: 3px 0;
+}
+
+.LoginBlock li, .RegisterBlock li, .BillInfo li, 
+.PaymentInfo li, .ShippingInfo li, .BillTo li, 
+.ShipTo li
+{
+	margin: 5px 0;
+	float: left;
+	list-style: none;
+	width: 50%;
+}
+
+.RegisterBlock li
+{
+	white-space: nowrap;
+}
+
+.PaymentInfo li
+{
+    width: 100%;
+}
+
+.LoginBlock fieldset, .RegisterBlock fieldset, .BillInfo fieldset, 
+.PaymentInfo fieldset, .ShippingDate fieldset, .ShippingInfo fieldset,
+.BillTo fieldset, .ShipTo fieldset
+{
+	border: solid 1px #cacaca
+}
+
+.LoginBlock legend, .RegisterBlock legend, .BillInfo legend, 
+.PaymentInfo legend, .ShippingDate legend, .ShippingInfo legend,
+.BillTo legend, .ShipTo legend
+{
+	font-size: 1.5em;
+}
+
+.PaymentCard input[type='radio'] ~ label, .ShippingInfo input[type='checkbox'] ~ label
+{
+	display: inline;
+	margin-left: 10px;
+}
+
+.ShipFirstName, .ShipLastName, .BillFirstName, .BillLastName
+{
+    font-size: 1.5em;
+}
+
+.BillTo .CreditCardType, .BillTo .CreditCardNumber, .BillTo .CreditCardExpire
+{
+    float: left;
+    font-style: italic;
+    margin: 5px 5px 5px 0;
+}
+
+.ui-datepicker .ui-datepicker-calendar a.ui-state-active
+{
+	background: #00a4db;
+}
+
+.iconremove {
+    height: 16px !important;
+    background: url(/images/icon_remove.png) no-repeat center center !important;
+}

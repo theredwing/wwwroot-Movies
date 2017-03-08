@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{648EE88D-00E3-41A1-8B46-05853A1D7390}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdventureWorks</RootNamespace>
+    <AssemblyName>AdventureWorks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.4">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Web.Wijmo.Controls.4">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Web.Wijmo.Controls.Design.4">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Services, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.Services.Design, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AddressManager.cs" />
+    <Compile Include="Business\AdventureWorks.Designer.cs" />
+    <Compile Include="Business\CategoryManager.cs" />
+    <Compile Include="Business\Common.cs" />
+    <Compile Include="Business\ContactManager.cs" />
+    <Compile Include="Business\CustomerManager.cs" />
+    <Compile Include="Business\DataService.cs" />
+    <Compile Include="Business\ProductManager.cs" />
+    <Compile Include="Business\RequestContext.cs" />
+    <Compile Include="Business\SalesOrderManager.cs" />
+    <Compile Include="Business\ShoppingCart.cs" />
+    <Compile Include="Business\ShoppingCartManager.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\SiteLayoutController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\WebResource.cs" />
+    <Compile Include="Models\ReviewOrderModel.cs" />
+    <Compile Include="Models\ProductsModel.cs" />
+    <Compile Include="Models\SiteLayoutModel.cs" />
+    <Compile Include="ProductImage.ashx.cs">
+      <DependentUpon>ProductImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="adventureworks.xml" />
+    <Content Include="App_Data\AdventureWorks_Data.mdf" />
+    <Content Include="App_Data\AdventureWorks_Data_log.ldf" />
+    <Content Include="App_Data\aspnetdb.mdf" />
+    <Content Include="App_Data\aspnetdb_log.ldf" />
+    <Content Include="App_Data\ProductDesc.xml" />
+    <Content Include="App_Themes\windows7\images\arrow_down.png" />
+    <Content Include="App_Themes\windows7\images\arrow_left.png" />
+    <Content Include="App_Themes\windows7\images\arrow_right.png" />
+    <Content Include="App_Themes\windows7\images\arrow_up.png" />
+    <Content Include="App_Themes\windows7\images\bikes_header.png" />
+    <Content Include="App_Themes\windows7\images\check.png" />
+    <Content Include="App_Themes\windows7\images\checked_radio.png" />
+    <Content Include="App_Themes\windows7\images\checked_radio_hover.png" />
+    <Content Include="App_Themes\windows7\images\check_hover.png" />
+    <Content Include="App_Themes\windows7\images\FadeDark.png" />
+    <Content Include="App_Themes\windows7\images\FadeDarkShort.png" />
+    <Content Include="App_Themes\windows7\images\FadeLight.png" />
+    <Content Include="App_Themes\windows7\images\FadeLightShort.png" />
+    <Content Include="App_Themes\windows7\images\grid.png" />
+    <Content Include="App_Themes\windows7\images\header_bg.png" />
+    <Content Include="App_Themes\windows7\images\home_tooltip.png" />
+    <Content Include="App_Themes\windows7\images\home_tooltip_hover.png" />
+    <Content Include="App_Themes\windows7\images\home_tooltip_noarrow.png" />
+    <Content Include="App_Themes\windows7\images\ico-cart.gif" />
+    <Content Include="App_Themes\windows7\images\ico-cart.png" />
+    <Content Include="App_Themes\windows7\images\ico-login.gif" />
+    <Content Include="App_Themes\windows7\images\ico-login.png" />
+    <Content Include="App_Themes\windows7\images\ico-register.gif" />
+    <Content Include="App_Themes\windows7\images\island.png" />
+    <Content Include="App_Themes\windows7\images\mountain.png" />
+    <Content Include="App_Themes\windows7\images\mountains_header.png" />
+    <Content Include="App_Themes\windows7\images\mountain_hover.png" />
+    <Content Include="App_Themes\windows7\images\mountain_tooltip.png" />
+    <Content Include="App_Themes\windows7\images\multipage_shadow.png" />
+    <Content Include="App_Themes\windows7\images\road.png" />
+    <Content Include="App_Themes\windows7\images\road_header.png" />
+    <Content Include="App_Themes\windows7\images\road_hover.png" />
+    <Content Include="App_Themes\windows7\images\road_tooltip.png" />
+    <Content Include="App_Themes\windows7\images\shadow.png" />
+    <Content Include="App_Themes\windows7\images\touring.png" />
+    <Content Include="App_Themes\windows7\images\touring_header.png" />
+    <Content Include="App_Themes\windows7\images\touring_hover.png" />
+    <Content Include="App_Themes\windows7\images\touring_tooltip.png" />
+    <Content Include="App_Themes\windows7\images\unchecked.png" />
+    <Content Include="App_Themes\windows7\images\unchecked_active.png" />
+    <Content Include="App_Themes\windows7\images\unchecked_hover.png" />
+    <Content Include="App_Themes\windows7\StyleBase.css" />
+    <Content Include="App_Themes\windows7\StyleSheet.css" />
+    <Content Include="css\Wijmo\images\ui-anim_basic_16x16-branch.gif" />
+    <Content Include="css\Wijmo\images\waiting.gif" />
+    <Content Include="css\Wijmo\images\wijeditor\wijmo-ui-editor-colormarker.png" />
+    <Content Include="css\Wijmo\images\wijeditor\wijmo-ui-editor-colormask.png" />
+    <Content Include="css\Wijmo\images\wijeditor\wijmo-ui-editor-colorwheel.png" />
+    <Content Include="css\Wijmo\images\wijeditor\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\images\wijeditor\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\images\wijrating\wijmo-ui-rating.png" />
+    <Content Include="css\Wijmo\jquery.wijmo-pro.all.3.20142.48.min.css" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_smooth_75_e6e6e6_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-bg_smooth_75_fafafa_1x400.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\arctic\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\arctic\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\images\icons-18-black.png" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\images\icons-18-white.png" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\images\icons-36-black.png" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\images\icons-36-white.png" />
+    <Content Include="css\Wijmo\Themes\aristo-mobile\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scrollbar-horizontal.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scrollbar-vertical.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scrollbutton-vertical.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-down-arrow.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-down-arrow_hover.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-left-arrow.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-left-arrow_hover.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-right-arrow.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-right-arrow_hover.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-up-arrow.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\scroller-up-arrow_hover.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_flat_0_2d5972_40x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_flat_0_4f4f4f_40x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_highlight-hard_80_c4c4c4_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_highlight-soft_100_83b0ca_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_highlight-soft_100_c0c0c0_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_highlight-soft_100_c4c4c4_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_highlight-soft_100_ccccd1_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_inset-hard_65_85b2cb_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_38667f_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_616161_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_898989_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\vertical-menu-item.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\aristo\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\aristo\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\bootstrap\bootstrap.min.css" />
+    <Content Include="css\Wijmo\Themes\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\bootstrap\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_glass_55_b3c4d8_500x100.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_glass_75_fef1bd_1x400.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_glass_85_dae6f4_1x400.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-bg_inset-hard_100_ffe475_1x100.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-icons_6e6c56_256x240.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\cobalt\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\images\icons-18-black.png" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\images\icons-18-white.png" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\images\icons-36-black.png" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\images\icons-36-white.png" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\jquery.mobile-1.2.0.min.css" />
+    <Content Include="css\Wijmo\Themes\jquery-mobile\jquery.mobile-1.4.0.min.css" />
+    <Content Include="css\Wijmo\Themes\lucid\images\animated-overlay.gif" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_007aa2_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_00a6dd_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_8dc63f_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_ede9ef_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_flat_0_f4f4f4_40x100.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-bg_glass_0_ffe7ca_1x400.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-icons_00a6dd_256x240.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-icons_333333_256x240.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-icons_6b239f_256x240.png" />
+    <Content Include="css\Wijmo\Themes\lucid\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\lucid\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_55_dabf2c_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_65_000000_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_75_000000_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_flat_95_b91d1d_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-icons_000000_256x240.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\metro-dark\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\images\icons-18-black.png" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\images\icons-18-white.png" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\images\icons-36-black.png" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\images\icons-36-white.png" />
+    <Content Include="css\Wijmo\Themes\metro-mobile\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_55_dabf2c_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_65_000000_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_75_000000_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_flat_95_b91d1d_40x100.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-icons_000000_256x240.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\metro\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\metro\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_flat_100_18181f_40x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_flat_100_583d3d_40x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_flat_10_3d4858_40x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_highlight-soft_15_191921_1x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_highlight-soft_15_32323d_1x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_highlight-soft_35_191921_1x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-bg_inset-soft_35_191921_1x100.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-icons_8fddff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-icons_a1ddff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-icons_f4f4f9_256x240.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-icons_fafafa_256x240.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\ui-icons_ff8f8f_256x240.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\midnight\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\midnight\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-18-black.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-18-gray.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-18-white.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-36-black.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-36-gray.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\images\icons-36-white.png" />
+    <Content Include="css\Wijmo\Themes\moonlight-mobile\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\action-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\action-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\alert-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\alert-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-d-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-l-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-l-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-r-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-r-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\arrow-u-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\audio-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\audio-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\back-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\back-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\bars-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\bars-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\bullets-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\bullets-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\calendar-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\calendar-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\camera-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\camera-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-d-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-d-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-l-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-l-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-r-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-r-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-u-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\carat-u-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\check-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\check-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\clock-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\clock-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\cloud-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\cloud-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\comment-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\comment-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\delete-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\delete-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\edit-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\edit-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\eye-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\eye-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\forbidden-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\forbidden-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\forward-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\forward-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\gear-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\gear-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\grid-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\grid-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\heart-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\heart-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\home-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\home-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\info-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\info-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\location-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\location-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\lock-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\lock-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\mail-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\mail-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\minus-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\minus-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\navigation-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\navigation-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\phone-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\phone-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\plus-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\plus-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\power-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\power-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\recycle-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\recycle-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\refresh-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\refresh-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\search-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\search-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\shop-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\shop-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\star-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\star-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\tag-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\tag-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\user-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\user-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\video-black.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\images\icons-png\video-white.png" />
+    <Content Include="css\Wijmo\Themes\ocean-mobile\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\images\ajax-loader.gif" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\images\icons-18-black.png" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\images\icons-18-white.png" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\images\icons-36-black.png" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\images\icons-36-white.png" />
+    <Content Include="css\Wijmo\Themes\rocket-mobile\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_diagonals-thick_50_00a6dd_40x40.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_flat_100_f1f1f1_40x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_242122_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_242122_1x100_bottom.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_333333_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_333333_1x100_50.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_65358a_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_8A56B2_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_9eca38_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_9eca38_1x100_50.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_15_ca3838_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_highlight-soft_35_00a6dd_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_inset-soft_100_e1e1e1_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_inset-soft_15_242122_1x100 - Copy.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-bg_inset-soft_15_242122_1x100.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_00a6dd_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_304915_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_d399ff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_eaffb9_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_f4f4f9_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_fafafa_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\ui-icons_ff8f8f_256x240.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\rocket\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\rocket\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\stafford\images\animated-overlay.gif" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_flat_0_8dc63f_40x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_flat_0_f0f0f0_40x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_flat_100_ffe4db_40x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_highlight-soft_20_202224_1x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_highlight-soft_20_888888_1x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_highlight-soft_40_0480c8_1x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_highlight-soft_40_c95c3a_1x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-bg_highlight-soft_55_fff9d4_1x100.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-icons_c95c3a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\stafford\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\Wijmo\Themes\stafford\jquery-wijmo.css" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_glass_55_bfc3c8_500x100.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_glass_75_fef1bd_1x400.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_glass_85_dae6f4_1x400.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_glass_85_edeff1_1x400.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-bg_inset-hard_100_ffe475_1x100.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-icons_6e6c56_256x240.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="css\Wijmo\Themes\sterling\images\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="css\Wijmo\Themes\sterling\jquery-wijmo.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\accept.gif" />
+    <Content Include="Images\awc_logo.png" />
+    <Content Include="Images\c1a2logo.png" />
+    <Content Include="Images\c1logo_215x150.png" />
+    <Content Include="Images\c1wijmologo.png" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\editing.gif" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\filter.gif" />
+    <Content Include="Images\loading_blue.gif" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\sprocket.gif" />
+    <Content Include="Images\superlight_silver_small.gif" />
+    <Content Include="Images\Wijmo72X72.png" />
+    <Content Include="js\AdvCommon.js" />
+    <Content Include="js\BillInfo.js" />
+    <Content Include="js\ChartCategory.js" />
+    <Content Include="js\CheckOut.js" />
+    <Content Include="js\Default.js" />
+    <Content Include="js\ListCategories.js" />
+    <Content Include="js\HeaderLayout.js" />
+    <Content Include="js\FooterLayout.js" />
+    <Content Include="js\JQuery\jquery-1.10.2.js" />
+    <Content Include="js\JQuery\jquery-1.9.1.min.js" />
+    <Content Include="js\JQuery\jquery-ui.js" />
+    <Content Include="js\JQuery\jquery-ui.min.js" />
+    <Content Include="js\ListProducts.js" />
+    <Content Include="js\Login.js" />
+    <Content Include="js\OpenCart.js" />
+    <Content Include="js\OrderComplete.js" />
+    <Content Include="js\OrderProgress.js" />
+    <Content Include="js\OrderSummary.js" />
+    <Content Include="js\ReviewOrder.js" />
+    <Content Include="js\Shipping.js" />
+    <Content Include="js\ViewProduct.js" />
+    <Content Include="js\Wijmo\jquery.wijmo-open.all.3.20142.48.min.js" />
+    <Content Include="js\Wijmo\jquery.wijmo-pro.all.3.20142.48.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SiteLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SiteLayout\HeaderLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\SiteLayout\FooterLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Default.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Business\AdventureWorks.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdventureWorks1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\Wijmo\Themes\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="css\Wijmo\Themes\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\Wijmo\Themes\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Products\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ChartCategory.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ListCategories.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ListProducts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ViewProduct.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProductImage.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ShoppingCart\OpenCart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_OrderSummary.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_OrderProgress.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\AdventureWorks-MVC.pubxml" />
+    <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
+    <Content Include="Views\Shared\_BillInfo.cshtml" />
+    <Content Include="Views\ShoppingCart\Shipping.cshtml" />
+    <Content Include="Views\ShoppingCart\ReviewOrder.cshtml" />
+    <Content Include="Views\ShoppingCart\OrderComplete.cshtml" />
+    <Content Include="Views\Home\Logout.cshtml" />
+    <Content Include="reportService.ashx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55185/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

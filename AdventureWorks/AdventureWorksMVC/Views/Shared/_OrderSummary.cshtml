@@ -1,0 +1,36 @@
+﻿<script src="~/js/OrderSummary.js"></script>
+<table id="C1GVShopCart" style="width:950px;"></table>
+<div id="PnlTotal">
+    <div class="cartinfo">
+        <h6>
+            Sub-Total:</h6>
+        <div class="item subtotal">
+            @Html.Label("lblSubTotalAmount", new { id = "lblSubTotalAmount", @class = "productPrice" })
+        </div>
+        <h6>Shipping:</h6>
+        <div class="item shipping">
+            <table>
+                <tr>
+                    <td>
+            @Html.Label("lblShippingAmount", new { id = "lblShippingAmount", @class = "productPrice" })</td><td>&nbsp;@Html.DropDownList("C1ComboShippingCompany", new SelectList(new[] { new { Text = "UPS", Value = "25" }, new { Text = "FedEX", Value = "35" }, }, "Value", "Text"), new { id = "C1ComboShippingCompany" })
+                        </td>
+                </tr>
+                </table>
+        </div>
+        <div id="phTaxTotal">
+            <h6>
+                Tax:</h6>
+            <div class="item tax">                
+                @Html.Label("lblTaxAmount", "$0", new { id = "lblTaxAmount", @class = "productPrice" })
+            </div>
+        </div>
+        <div class="total">
+            <h6>
+                Total:</h6>
+            <div class="item totalinner">
+                @Html.Label("lblTotalAmount", new { id = "lblTotalAmount", @class = "productPrice" })
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("HFIsInWindow",(string)@ViewBag.IsInWindow)

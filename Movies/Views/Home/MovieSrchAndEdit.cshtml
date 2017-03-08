@@ -1,0 +1,205 @@
+﻿@model Movies.Models.MovieV
+@using System.Web.UI.WebControls
+@using System.Data.Entity
+
+@{
+    ViewBag.Title = "MovieSrchAndEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Movies.Models.Movie mv = ViewBag.Movie;
+    Movies.Models.MovieCategory mc = ViewBag.MovieCategory;
+    Movies.Models.MovieNamesPosition mnp = ViewBag.MovieNamesPosition;
+    List<Movies.Models.Datagrid> vmList = ViewBag.vmList;
+    //Movies.Models.CrewTitle ct = Convert.ToInt32("0" + ViewBag.CrewTitle);
+    //Movies.Models.Category cg = Convert.ToInt32("0" + ViewBag.Category);
+}
+
+<script type="text/javascript">
+    function focusFunction(ctl) {
+        document.getElementById(ctl).style.background = "darkorchid";
+    }
+
+    function blurFunction(ctl) {
+        document.getElementById(ctl).style.background = "transparent";
+    }
+
+    function blurFunctionButton(ctl) {
+        document.getElementById(ctl).style.background = "darkturquoise";
+    }
+
+    $(document).ready(function ()
+    {
+        var selectCrwTit = $('#ddlCrewTitleID :selected').val();
+
+        $('#ddlCrewTitleID').change(function () {
+            selectCrwTit = $('#ddlCrewTitleID :selected').val();
+//If a crew title is selected then the user cannot enter an actor string since the crew title is Director, Producer, Writer
+            if (selectCrwTit > 0) {
+                $('#txtActor').attr('disabled', 'disabled');
+                $('#txtActor').val('disabled');
+            }
+            else {
+                $('#txtActor').removeAttr('disabled');
+                $('#txtActor').val('');
+            }
+        })
+    });
+
+    //var CrewTitle = [
+    //"",
+    //"Director",
+    //"Producer",
+    //"Writer"];
+
+    //$("#CrewTitle").jqxListBox({
+    //    source: CrewTitle,
+    //    selectedIndex: 0
+    //});
+
+    //$('#CrewTitle').on('click', function () {
+    //    var index = $("#").jqxListBox('getSelectedIndex');
+    //    alert("Selected Index: " + index);
+    //});
+</script>
+
+@using (Html.BeginForm("Search", "Home"))
+{
+    <div class="BoldTitle">
+        <h2>Movie Search and Edit</h2>
+        <table align="center">
+            <tr>
+                <td valign="top">
+                    <table>
+                        <tr>
+                            <td align="right"><label class="BoldTitle" id="lblMovie">Movie: </label></td>
+                            <td width="1"></td>
+                            <td>
+                                @Html.TextBoxFor(model => model.strMovieTitle, new
+                               {
+                                   @class = "txtBox",
+                                   id = "txtMovie",
+                                   PlaceHolder = "Part of Movie Title",
+                                   tabIndex = 10,
+                                   maxlength = 40,
+                                   onfocus = "focusFunction('lblMovie')",
+                                   onblur = "blurFunction('lblMovie')"
+                               })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label class="BoldTitle" id="lblActor">Actor: </label></td>
+                            <td width="1"></td>
+                            <td>
+                                @Html.TextBoxFor(model => model.strActorName, new
+                               {
+                                   @class = "txtBox",
+                                   id = "txtActor",
+                                   PlaceHolder = "Part of Actor Name",
+                                   tabIndex = 20,
+                                   maxlength = 40,
+                                   onfocus = "focusFunction('lblActor')",
+                                   onblur = "blurFunction('lblActor')"
+                               })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label class="BoldTitle" id="lblCrew">Crew Member: </label></td>
+                            <td width="1"></td>
+                            <td>
+                                @Html.TextBoxFor(model => model.strCrewName, new
+                               {
+                                   @class = "txtBox",
+                                   id = "txtCrew",
+                                   PlaceHolder = "Part of Crew Name",
+                                   tabIndex = 30,
+                                   maxlength = 40,
+                                   onfocus = "focusFunction('lblCrew')",
+                                   onblur = "blurFunction('lblCrew')"
+                               }))
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label class="BoldTitle" id="lblCrewTitle">Crew Title: </label></td>
+                            <td width="1"></td>
+                            <td>
+                                @{var CrewPosition = new List<SelectListItem>
+                                {
+                                    new SelectListItem { Text = "", Value = "0" },
+                                    new SelectListItem { Text = "Director", Value = "1" },
+                                    new SelectListItem { Text = "Producer", Value = "2" },
+                                    new SelectListItem { Text = "Writer", Value = "3" },
+                                };
+                                }
+                                @Html.DropDownListFor(model => model.intCrewTitleID, (IEnumerable<SelectListItem>)CrewPosition, new
+                               {
+                                   id = "ddlCrewTitleID",
+                                   tabIndex = 40,
+                                   onfocus = "focusFunction('lblCrewTitle')",
+                                   onblur = "blurFunction('lblCrewTitle')"
+
+                               })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                @*<td>
+                    <table>
+                        <tr>
+                            <td align="right"><label class="BoldTitle" id="lblCategory">Category: </label></td>
+                            <td width="1"></td>
+                            <td>
+                                @{var Category = new List<SelectListItem>
+                                            {
+                                                new SelectListItem { Text = "Drama", Value = "25" },
+                                                new SelectListItem { Text = "Comic Book Drama", Value = "1" },
+                                                new SelectListItem { Text = "Crime Drama", Value = "2" },
+                                                new SelectListItem { Text = "Legal Drama", Value = "3" },
+                                                new SelectListItem { Text = "Political Drama", Value = "4" },
+                                                new SelectListItem { Text = "Psycho Drama", Value = "5" },
+                                                new SelectListItem { Text = "Romantic Drama", Value = "6" },
+                                                new SelectListItem { Text = "War Drama", Value = "7" },
+                                                new SelectListItem { Text = "Comedy", Value = "8" },
+                                                new SelectListItem { Text = "Romantic Comedy", Value = "9" },
+                                                new SelectListItem { Text = "Slapstick", Value = "10" },
+                                                new SelectListItem { Text = "Action", Value = "11" },
+                                                new SelectListItem { Text = "Adventure", Value = "12" },
+                                                new SelectListItem { Text = "Animation", Value = "13" },
+                                                new SelectListItem { Text = "Documentary", Value = "14" },
+                                                new SelectListItem { Text = "Fantasy", Value = "15" },
+                                                new SelectListItem { Text = "Foreign", Value = "16" },
+                                                new SelectListItem { Text = "Horror", Value = "17" },
+                                                new SelectListItem { Text = "Musical", Value = "18" },
+                                                new SelectListItem { Text = "Mystery", Value = "19" },
+                                                new SelectListItem { Text = "Science Fiction", Value = "20" },
+                                                new SelectListItem { Text = "Sports", Value = "21" },
+                                                new SelectListItem { Text = "TV Show", Value = "22" },
+                                                new SelectListItem { Text = "Variety Show", Value = "23" },
+                                                new SelectListItem { Text = "Western", Value = "24" },
+                                            };
+                                }
+
+                                @Html.ListBox("Categories", new SelectList(Category, "Value", "Text", ViewBag.CategoryIDs),
+                                                                                        new
+                                                                                        {
+                                                                                            @class = "listBox",
+                                                                                            tabIndex = 50,
+                                                                                            onfocus = "focusFunction('lblCategory')",
+                                                                                            onblur = "blurFunction('lblCategory')"
+                                                                                        })
+                            </td>
+                        </tr>
+                    </table>
+                </td>*@
+            </tr>
+            <tr><td colspan="3" height="20"></td></tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <button id="btnSave" class="clsbutton" type="submit" tabindex="60" onclick="location.href = '@Url.Action(null)'"
+                            onfocus="focusFunction('btnSave')" onblur="blurFunctionButton('btnSave')">
+                        Search
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

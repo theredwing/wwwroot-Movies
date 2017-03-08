@@ -1,0 +1,26 @@
+﻿<script src="~/js/ListCategories.js"></script>
+@model AdventureWorks.Models.ProductsModel
+<div class="SubCategoryContainer">
+    @foreach (var item in Model.ProductSubCategoryList)    
+    {        
+            <div class="SubCategory">
+                <div id="chartContainer" class="yui-u C1ChartContainer">
+                    @{
+                    if(Model.ChartVisibility=="visible")
+                    {
+                        <div id="C1BarChart_@item.ProductSubcategoryID.ToString()"></div>                       
+                    }
+                }
+                </div>
+                <div class="yui-gc">
+                    <h3 class="SubCategoryName">
+                        <a href="@Url.Action("Index", "Products", new { Category = item.ProductCategory.Name, SubCategory = item.Name })">@item.Name</a>
+                    </h3>
+                    <div class="yui-u first">                                        
+                        <div id="C1Carousel_@item.ProductSubcategoryID.ToString()" style="width:950px;height:104px;"></div>
+                    </div>
+                </div>
+            </div>
+    }
+</div>
+

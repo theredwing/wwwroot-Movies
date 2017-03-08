@@ -1,0 +1,46 @@
+﻿<script src="~/js/Default.js"></script>
+@{
+    ViewBag.Title = "AdventureWorks Cycles";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+<div id="homepage" class="">
+    @ViewBag.ErrMsg
+<div class="bikes_button">
+        <a href="@Url.Action("Index","Products",new {Category="Bikes"})">
+            <div class="bikes_inner">
+                <h1>
+                    Check out our full <strong>Bikes</strong> selection!</h1>
+            </div>
+        </a>
+    </div>
+    <div class="islandcontainer">
+        <div class="island">
+            <a href="@Url.Action("Index","Products",new {Category="Bikes",SubCategory="Mountain Bikes"})">
+                <div class="mountain_tooltip">
+                    <h1>
+                        Mountain</h1>
+                </div>
+                <div id="mountain" class="mountain">
+                </div>
+            </a>
+            <a href="@Url.Action("Index","Products",new {Category="Bikes",SubCategory="Touring Bikes"})">            
+                <div class="road_tooltip">
+                    <h1>
+                        Touring</h1>
+                </div>
+                <div id="road" class="road">
+                </div>
+            </a>
+            <a href="@Url.Action("Index","Products",new {Category="Bikes",SubCategory="Road Bikes"})">
+                <div class="touring_tooltip">
+                    <h1>
+                        Road</h1>
+                </div>
+                <div id="touring" class="touring">
+                    &nbsp;
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>

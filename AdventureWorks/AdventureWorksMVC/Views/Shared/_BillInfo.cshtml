@@ -1,0 +1,147 @@
+﻿<script src="~/js/BillInfo.js"></script>
+<div id="BillInfoDiv">
+<fieldset>
+    <legend>Info</legend>
+    <ul>
+        <li>Email</li>
+        <li>
+            @Html.TextBox("EmailCon", (string)@ViewBag.Email, new { ID = "EmailCon", @class = "", style = "width:190px;" })
+        </li>
+        <li>First Name</li>
+        <li>
+            @Html.TextBox("FirstNameCon", "", new { ID = "FirstNameCon", @class = "",maxlength="50" })
+        </li>
+        <li>Last Name </li>
+        <li>
+            @Html.TextBox("LastNameCon", "", new { ID = "LastNameCon", @class = "",maxlength="50"})
+        </li>
+        <li>Address </li>
+        <li>
+            @Html.TextBox("AddressLine1Con", "201 S Highland Ave", new { ID = "AddressLine1Con", @class = "",maxlength="100",style="width:190px;"})
+            @Html.TextBox("AddressLine2Con", "3rd Floor", new { ID = "AddressLine2Con", @class = "",maxlength="100",style="width:190px;"})
+        </li>
+        <li>City </li>
+        <li>
+            @Html.TextBox("CityCon", "Pittsburgh", new { ID = "CityCon", @class = "", maxlength = "100" })
+        </li>
+        <li>State </li>
+        <li>
+            <select id="StateCon" style="height:250px;">
+                    <option  Value="AL">Alabama
+                    </option>
+                    <option  Value="AK">Alaska
+                    </option>
+                    <option  Value="AZ">Arizona
+                    </option>
+                    <option  Value="AR">Arkansas
+                    </option>
+                    <option  Value="CA">California
+                    </option>
+                    <option  Value="CO">Colorado
+                    </option>
+                    <option  Value="CT">Connecticut
+                    </option>
+                    <option  Value="DE">Delaware
+                    </option>
+                    <option  Value="DC">District of Columbia
+                    </option>
+                    <option  Value="FL">Florida
+                    </option>
+                    <option  Value="GA">Georgia
+                    </option>
+                    <option  Value="HI">Hawaii
+                    </option>
+                    <option  Value="ID">Idaho
+                    </option>
+                    <option  Value="IL">Illinois
+                    </option>
+                    <option  Value="IN">Indiana
+                    </option>
+                    <option  Value="IA">Iowa
+                    </option>
+                    <option  Value="KS">Kansas
+                    </option>
+                    <option  Value="KY">Kentucky
+                    </option>
+                    <option  Value="LA">Louisiana
+                    </option>
+                    <option  Value="ME">Maine
+                    </option>
+                    <option  Value="MD">Maryland
+                    </option>
+                    <option  Value="MA">Massachusetts
+                    </option>
+                    <option  Value="MI">Michigan
+                    </option>
+                    <option  Value="MN">Minnesota
+                    </option>
+                    <option  Value="MS">Mississippi
+                    </option>
+                    <option  Value="MO">Missouri
+                    </option>
+                    <option  Value="MT">Montana
+                    </option>
+                    <option  Value="NE">Nebraska
+                    </option>
+                    <option  Value="NV">Nevada
+                    </option>
+                    <option  Value="NH">New Hampshire
+                    </option>
+                    <option  Value="NJ">New Jersey
+                    </option>
+                    <option  Value="NM">New Mexico
+                    </option>
+                    <option  Value="NY">New York
+                    </option>
+                    <option  Value="NC">North Carolina
+                    </option>
+                    <option  Value="ND">North Dakota
+                    </option>
+                    <option  Value="OH">Ohio
+                    </option>
+                    <option  Value="OK">Oklahoma
+                    </option>
+                    <option  Value="OR">Oregon
+                    </option>
+                    <option  Value="PA" selected="selected">Pennsylvania
+                    </option>
+                    <option  Value="RI">Rhode Island
+                    </option>
+                    <option  Value="SC">South Carolina
+                    </option>
+                    <option  Value="SD">South Dakota
+                    </option>
+                    <option  Value="TN">Tennessee
+                    </option>
+                    <option  Value="TX">Texas
+                    </option>
+                    <option  Value="UT">Utah
+                    </option>
+                    <option  Value="VT">Vermont
+                    </option>
+                    <option  Value="VA">Virginia
+                    </option>
+                    <option  Value="WA">Washington
+                    </option>
+                    <option  Value="WV">West Virginia
+                    </option>
+                    <option  Value="WI">Wisconsin
+                    </option>
+                    <option  Value="WY">Wyoming
+                    </option>
+                </select>
+        </li>
+        <li>Zip </li>
+        <li>
+            @Html.TextBox("ZipCon", "15206", new { ID = "ZipCon", @class = "", maxlength = "50" })
+        </li>
+        <li>Phone </li>
+        <li>
+            @Html.TextBox("PhoneCon", "(412)681-4343", new { ID = "PhoneCon", @class = "", maxlength = "50" })
+        </li>
+    </ul>
+</fieldset>
+</div>
+<span style="color:red;">
+    @Html.Label("LblBillInfoErrMessage", " ", new { id = "LblBillInfoErrMessage" })
+</span>

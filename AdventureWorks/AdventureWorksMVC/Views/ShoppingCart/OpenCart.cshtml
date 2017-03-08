@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "AdventureWorks Cycles - Shopping Cart";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+<script src="~/js/OpenCart.js"></script>
+
+	<div class="ShoppingCart">
+        @Html.Partial("_OrderProgress", new ViewDataDictionary { { "OrderStep", 1 }})
+        <div class="ShoppingBody">
+            @Html.Partial("_OrderSummary", new ViewDataDictionary { { "IsInWindow", "0" } })
+        </div>
+        <div class="ShoppingFooter">
+            <input type="button" id="btnContinue" value="Continue Shopping" class="ShoppingCartContinueButton" onclick="ContinueShopping();" />
+            <input type="button" id="btnCheckOut" value="Check Out" class="ShoppingCartCheckOutButton" onclick="Checkout();" />
+        </div>
+    </div>
